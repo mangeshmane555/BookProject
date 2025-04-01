@@ -118,7 +118,6 @@ public function view($id)
 
 	return view('books/view', $data); 
 	return view('books/list', $data);  // Passing data to modal when modal button gets clicked 
-
 }
 
 //To delete selected record of book from book list ---------------------------------------
@@ -140,7 +139,6 @@ public function view($id)
 	}
 	public function viewRecord()
 	{
-
 		$books = new BookModel();
 		$b_id = $this->request->getGet('book_id'); //getting the book_id from the ajax call using get method
 		$data['books'] = $books->find($b_id);    // finding the record as per b_id from table using model instance
